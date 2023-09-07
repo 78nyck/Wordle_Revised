@@ -3,8 +3,23 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+/*
 div {
     outline: black solid 1px;
+}
+*/
+
+.outside-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.outside-container>* {
+    max-width: 33%;
+    width: 100%;
+    height: 100%;
 }
 
 
