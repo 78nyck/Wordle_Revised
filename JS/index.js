@@ -6,11 +6,17 @@ function getRandomInt(max) {
 }
 let word = WORD_LIST.get(getRandomInt(WORD_TOTAL));
 console.log(word);
+
 let worldeGameBoard = new GameBoard(word);
 
 
 function normalKeyPress(key, gameBoard) {
     gameBoard.pushLetter(key);
+    writeCurrentRow(gameBoard);
+}
+
+function delKeyPress(gameBoard) {
+    gameBoard.deleteLetter();
     writeCurrentRow(gameBoard);
 }
 
@@ -23,17 +29,14 @@ function writeCurrentRow(gameBoard) {
     }
 }
 
-function delKeyPress(gameBoard) {
-    gameBoard.deleteLetter();
-    writeCurrentRow(gameBoard);
-}
 
 function entKeyPress(gameBoard) {
     let colorList = gameBoard.colorCurrentRow();
-    console.log(colorList)
-    colorEachLetter(colorList, gameBoard);
-    colorKeyboard(colorList, gameBoard);
-    gameBoard.advanceNextRow();
+    if (!colorList.includes("X")) {
+        colorEachLetter(colorList, gameBoard);
+        colorKeyboard(colorList, gameBoard);
+        gameBoard.advanceNextRow();
+    }
 }
 
 function colorEachLetter(colorList, gameBoard) {
@@ -48,8 +51,6 @@ function colorEachLetter(colorList, gameBoard) {
         }
     }
 }
-
-// something is wrong here
 
 function colorKeyboard(colorList, gameBoard) {
     let rowBoxes = $(".row.row" + gameBoard.currentRow + ">*");
@@ -88,4 +89,16 @@ $("body").on("keydown", function(e) {
     } else if (e.key === "Enter") {
         entKeyPress(worldeGameBoard);
     }
+});
+
+$(".keyboard-key").on("click", function(e) {
+    let key = $(e.currentTarget).children().text()
+    if (key === "Del") {
+        delKeyPress(worldeGameBoard);
+    } else if (key === "Ent") {
+        entKeyPress(worldeGameBoard);
+    } else {
+        normalKeyPress(key.toLocaleLowerCase(), worldeGameBoard);
+    }
+    
 });

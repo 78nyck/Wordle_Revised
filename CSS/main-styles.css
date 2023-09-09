@@ -8,6 +8,9 @@ div {
     outline: black solid 1px;
 }
 */
+span {
+    cursor: pointer;
+}
 
 .outside-container {
     margin: 0;

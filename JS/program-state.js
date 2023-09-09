@@ -29,8 +29,10 @@ class GameRow {
 
     colorRow(target) {
         if (this.rowList.includes(" ")) {
-            return;
-        } else {
+            return ["X"];
+        } else if (!VALID_GUESSES.has(this.rowList.join(""))){
+            return ["X"];
+        }else {
             let guess = this.rowList.join("");
             let colors = new Array(target.length);
             let letterCounts = {};
