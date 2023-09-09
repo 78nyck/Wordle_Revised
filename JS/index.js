@@ -1,5 +1,5 @@
 const VALID_LETTERS = new Set("QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm".split(""));
-const WORD_TOTAL = 4267;
+const WORD_TOTAL = 4266;
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
