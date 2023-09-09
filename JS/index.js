@@ -100,5 +100,4 @@ $(".keyboard-key").on("click", function(e) {
     } else {
         normalKeyPress(key.toLocaleLowerCase(), worldeGameBoard);
     }
-    
 });
