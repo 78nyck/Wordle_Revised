@@ -1,20 +1,29 @@
-@media only screen and (min-width: 820px) {
+@media only screen and (max-width: 414px) {
     .guess-grid-container {
         outline: 2px solid black;
-        border-radius: 5%;
+        border-radius: 2%;
         padding: 1%;
         margin-top: 10px;
-        max-width: 25%;
+        max-width: 75%;
     }
-}
-
-@media only screen and (max-width: 821px) {
+    
+} 
+@media only screen and (min-width: 820px) {
     .guess-grid-container {
         outline: 2px solid black;
         border-radius: 2%;
         padding: 1%;
         margin-top: 10px;
         max-width: 80%;
+    }
+}
+@media only screen and (min-width: 821px) {
+    .guess-grid-container {
+        outline: 2px solid black;
+        border-radius: 5%;
+        padding: 1%;
+        margin-top: 10px;
+        max-width: 25%;
     }
 }
 
@@ -41,4 +50,3 @@
     align-items: center;
     justify-content: center;
 }
-

@@ -2,7 +2,6 @@ body {
     margin: 2px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 /*
 div {
     outline: black solid 1px;
@@ -14,7 +13,6 @@ span {
 
 .outside-container {
     margin: 0;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,9 +34,3 @@ span {
 .gray {
     background-color: gray;
 }
-
-
-
-
-
-
