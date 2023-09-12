@@ -1,9 +1,21 @@
-.guess-grid-container {
-    outline: 2px solid black;
-    border-radius: 5%;
-    padding: 1%;
-    margin-top: 10px;
-    max-width: 25%;
+@media only screen and (min-width: 820px) {
+    .guess-grid-container {
+        outline: 2px solid black;
+        border-radius: 5%;
+        padding: 1%;
+        margin-top: 10px;
+        max-width: 25%;
+    }
+}
+
+@media only screen and (max-width: 821px) {
+    .guess-grid-container {
+        outline: 2px solid black;
+        border-radius: 2%;
+        padding: 1%;
+        margin-top: 10px;
+        max-width: 80%;
+    }
 }
 
 .row {
@@ -23,6 +35,7 @@
     height: 0;
     font-weight: bolder;
     font-size: 125%;
+    
     
     display: flex;
     align-items: center;

@@ -1,7 +1,23 @@
-.keyboard-container {
-    max-width: 40%;
-    margin-top: 20px;
-}
+@media only screen and (max-width: 414px) {
+    .keyboard-container {
+        max-width: 96%;
+        margin-top: 20px;
+    }
+} 
+
+@media only screen and (min-width: 768px) {
+    .keyboard-container {
+        max-width: 90%;
+        margin-top: 20px;
+    }
+} 
+
+@media only screen and (min-width: 821px) {
+    .keyboard-container {
+        max-width: 40%;
+        margin-top: 20px;
+    }
+} 
 
 .keyboard-row {
     display: flex;
@@ -20,6 +36,7 @@
     padding-bottom: 5%;
     display: flex;
     align-items: center;
+    font-size: 80%;
     justify-content: center; 
 }
 
