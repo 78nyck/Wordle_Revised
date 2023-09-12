@@ -87,6 +87,10 @@ function revealPopup() {
     $(".popup").show();
 }
 
+function hidePopup() {
+    $(".popup").hide();
+}
+
 $("body").on("keypress", function(e) {
     if (VALID_LETTERS.has(e.key)) {
         normalKeyPress(e.key, worldeGameBoard);
@@ -111,3 +115,5 @@ $(".keyboard-key").on("click", function(e) {
         normalKeyPress(key.toLocaleLowerCase(), worldeGameBoard);
     }
 });
+
+$("#popup-close").on("click", hidePopup);

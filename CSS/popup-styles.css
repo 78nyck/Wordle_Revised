@@ -12,9 +12,21 @@
     background-color: darkgrey;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-right {
+    
+}
 #current-word {
     margin: 10px;
+}
+
+button {
+    margin: 0;
+    margin-right: 10px;
+    height: fit-content;
 }
