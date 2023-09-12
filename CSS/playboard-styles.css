@@ -1,10 +1,43 @@
-.guess-grid-container {
-    outline: 2px solid black;
-    border-radius: 5%;
-    padding: 1%;
-    margin-top: 10px;
-    max-width: 25%;
+@media only screen and (min-width: 821px) {
+    .guess-grid-container {
+        outline: 2px solid black;
+        border-radius: 5%;
+        padding: 1%;
+        margin-top: 10px;
+        max-width: 25%;
+    }
 }
+@media only screen and (max-width: 820px) {
+    .guess-grid-container {
+        outline: 2px solid black;
+        border-radius: 2%;
+        padding: 1%;
+        margin-top: 10px;
+        max-width: 80%;
+    }
+}
+@media only screen and (max-width: 415px) {
+    .guess-grid-container {
+        outline: 2px solid black;
+        border-radius: 2%;
+        padding: 1%;
+        margin-top: 10px;
+        max-width: 75%;
+    } 
+} 
+@media only screen and (max-width: 375px) {
+    .guess-grid-container {
+        outline: 2px solid black;
+        border-radius: 2%;
+        padding: 1%;
+        margin-top: 10px;
+        max-width: 70%;
+    } 
+} 
+
+
+
+
 
 .row {
     display: flex;
@@ -24,8 +57,8 @@
     font-weight: bolder;
     font-size: 125%;
     
+    
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
