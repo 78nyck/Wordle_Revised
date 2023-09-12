@@ -2,7 +2,7 @@ class GameRow {
     constructor() {
         this.rowList = (new Array(5)).fill(" ");
         this.currentIndex = 0;
-        this.rowColors = [];
+        this.rowColors = "";
     }
 
     add(letter) {
@@ -25,6 +25,10 @@ class GameRow {
 
     getRowList() {
         return this.rowList;
+    }
+
+    getRowColors() {
+        return this.rowColors;
     }
 
     colorRow(target) {
@@ -58,7 +62,7 @@ class GameRow {
                     }
                 }
             }
-            this.rowColors = colors;
+            this.rowColors = colors.join("");
             return colors;
         }
     }
@@ -102,5 +106,13 @@ class GameBoard {
 
     colorCurrentRow() {
         return this.board[this.currentRow].colorRow(this.targetWord);
+    }
+
+    isWinningState() {
+        return this.board[this.currentRow].getRowColors() === "GGGGG"
+    }
+
+    isLostGame() {
+        return this.board[this.currentRow].getRowColors() !== "GGGGG" && this.currentRow === 6;
     }
 }

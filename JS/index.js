@@ -34,7 +34,13 @@ function entKeyPress(gameBoard) {
     if (!colorList.includes("X")) {
         colorEachLetter(colorList, gameBoard);
         colorKeyboard(colorList, gameBoard);
-        gameBoard.advanceNextRow();
+        if (gameBoard.isWinningState()) {
+            revealPopup();
+        } else if (gameBoard.isLostGame()) {
+            revealPopup();
+        } else {
+            gameBoard.advanceNextRow();
+        }
     }
 }
 
@@ -74,6 +80,11 @@ function colorKeyboard(colorList, gameBoard) {
             key.addClass("green")
         }
     }
+}
+
+function revealPopup() {
+    $("#current-word").text($("#current-word").text() + " " + word);
+    $(".popup").show();
 }
 
 $("body").on("keypress", function(e) {
