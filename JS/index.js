@@ -4,11 +4,11 @@ const WORD_TOTAL = 4266;
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
+
 let word = WORD_LIST.get(getRandomInt(WORD_TOTAL));
 console.log(word);
 
 let worldeGameBoard = new GameBoard(word);
-
 
 function normalKeyPress(key, gameBoard) {
     gameBoard.pushLetter(key);
@@ -25,10 +25,9 @@ function writeCurrentRow(gameBoard) {
     let rowLetters = $(".row.row" + gameBoard.currentRow + ">*>*");
 
     for (let i = 0; i < currentRow.length; i++) {
-        $(rowLetters[i]).text(currentRow[i]);
+        rowLetters[i].innerText = (currentRow[i]);
     }
 }
-
 
 function entKeyPress(gameBoard) {
     let colorList = gameBoard.colorCurrentRow();
