@@ -1,11 +1,11 @@
-rawText = open("MISC/words.txt", "r")
+rawText = open("MISC/valid-solutions.txt", "r")
 formattedText = open("MISC/valid-guesses.txt", "w")
 
-toWrite = "const VALID_GUESSES = new Set(["
+toWrite = "const VALID_GUESSES = ["
 for line in rawText:
     toWrite = toWrite + '"' + line.strip() + '", '
 
-toWrite = toWrite[0: -2] + "]);"
+toWrite = toWrite[0: -2] + "];"
 formattedText.write(toWrite)
 
 rawText.close()

@@ -1,11 +1,11 @@
 const VALID_LETTERS = new Set("QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm".split(""));
-const WORD_TOTAL = 4266;
+const WORD_TOTAL = WORD_LIST.length;
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-let word = WORD_LIST.get(getRandomInt(WORD_TOTAL));
+let word = WORD_LIST[getRandomInt(WORD_TOTAL)];
 console.log(word);
 
 let worldeGameBoard = new GameBoard(word);
