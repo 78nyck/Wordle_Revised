@@ -5,19 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script defer src="JS/nav-overlay.js"></script>
         <script defer src="JS/CONSTANTS/word-list.js"></script>
         <script defer src="JS/CONSTANTS/valid-guesses.js"></script>
         <script defer src="JS/program-state.js"></script>
+        <script defer src="JS/wordle-ai.js"></script>
         <script defer src="JS/index.js"></script>
 
         <link rel="stylesheet" href="CSS/main-styles.css">
         <link rel="stylesheet" href="CSS/playboard-styles.css">
         <link rel="stylesheet" href="CSS/keyboard-styles.css">
         <link rel="stylesheet" href="CSS/popup-styles.css">
+        <link rel="stylesheet" href="CSS/nav-styles.css">
 
         <title>Wordle BABY!</title>
     </head>
     <body>
+        <header class="nav-space">
+            <div class="overlay-button">
+                <span class="overlay-open">≡</span>
+            </div>
+        </header>
+
+        <div id="myNav" class="overlay">
+            <span class="overlay-close">X</span>
+            <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="settings.html">Settings</a>
+            </div>
+        </div>
+
         <div class="outside-container">
             <div class="guess-grid-container">
                 <div class="row row1">
