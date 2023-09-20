@@ -9,6 +9,8 @@ let word = WORD_LIST[getRandomInt(WORD_TOTAL)];
 console.log(word);
 
 let worldeGameBoard = new GameBoard(word);
+let wordleAI = new WordleAI(WORD_LIST);
+let myWordList = [...WORD_LIST];
 
 function normalKeyPress(key, gameBoard) {
     gameBoard.pushLetter(key);
@@ -32,6 +34,10 @@ function writeCurrentRow(gameBoard) {
 function entKeyPress(gameBoard) {
     let colorList = gameBoard.colorCurrentRow();
     if (!colorList.includes("X")) {
+
+        myWordList = wordleAI.makeGuess(colorList, gameBoard.getCurrentRow().getRowList().join(""), myWordList);
+        console.log(myWordList.pop());
+
         colorEachLetter(colorList, gameBoard);
         colorKeyboard(colorList, gameBoard);
         if (gameBoard.isWinningState()) {

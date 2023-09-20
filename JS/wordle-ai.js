@@ -1,11 +1,12 @@
 class WordleAI {
-    constructor() {
-
+    constructor(wordList) {
+        this.wordList = wordList;
+        this.guessNumber = 0;
     }
 
-    makeGuess(colorList, guess, wordlList) {
+    makeGuess(colorList, guess, wordList) {
         let iList = this.makeInstructionList(colorList, guess);
-        let wList = this.reduceWordList(iList, wordlList, guess);
+        let wList = this.reduceWordList(iList, wordList, guess);
         return wList;
     }
 
@@ -23,9 +24,9 @@ class WordleAI {
         return instructionList;
     }
 
-    reduceWordList(instructionList, wordlList, guess) {
+    reduceWordList(instructionList, wordList, guess) {
         let newWordList = [];
-        for (const word of wordlList) {
+        for (const word of wordList) {
             if (this.checkWordValidity(word, instructionList, guess)) {
                 newWordList.push(word);
             }
